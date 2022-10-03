@@ -1,38 +1,311 @@
-.App {
+.home_top_background {
+  background-image: url("C:\Users\Mshohrat\Desktop\netflix-clone\public\top-background.jpg");
+  /* Set a specific height */
+  box-shadow: 5px 150px 1000px rgb(8, 8, 8) inset;
+  min-height: 2000px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100%; */
+}
+@media (max-width: 768px) {
+  .home_top_background {
+    background-image: url("C:\Users\Mshohrat\Desktop\netflix-clone\public\top-background.jpg");
+    /* Set a specific height */
+    box-shadow: 5px 150px 1000px rgb(8, 8, 8) inset;
+    /* min-height: 500px; */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.netflix__logo {
+  padding-left: 40px;
+}
+@media (max-width: 768px) {
+  .netflix__logo {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+}
+.logo__img {
+  width: 160px;
+}
+@media (max-width: 768px) {
+  .logo__img {
+    width: 110px;
+  }
+}
+.btn {
+  position: absolute;
+  top: 8px;
+  right: 50px;
+  padding-top: 20px;
+}
+@media (max-width: 768px) {
+    .btn {
+        right: 20px;
+      }
+  }
+select {
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #e50914;
+}
+@media (max-width: 768px) {
+    select {
+        font-size: 15px;
+        padding: 5px;
+    }
+  }
+  a:link {
+      text-decoration: none;
+  }
+  a:visited {
+    color: white;
+  }
+ 
+  .heading__container__eng__h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 100px;
+    }
+    @media (max-width: 768px) {
+      .heading__container__eng__h1 {
+        font-size: 0.9rem;
+        padding-top: 30px;  
+      }
+    }
+   
+    .eng__h1{
+      max-width: 600px;
+      text-shadow: 2px 2px 2px black;
+    }
+    @media (max-width: 768px) {
+      .eng__h2{
+        margin-top: -10px !important; 
+       font-size: 17px;
+       /* font-weight: lighter; */
+       /* font-weight: normal; */
+      }
+    }
+    .eng__h2{
+      margin-top: -20px;
+      text-align:center;
+      color: white;
+      font-weight: normal;
+      text-shadow: 0 0 8px #000;
+    }
+    .eng__h3{
+      text-align:center;
+      color: white;
+      font-weight: normal;
+      text-shadow: 0 0 8px #000;
+    }
+    @media (max-width: 768px) {
+      .heading__container__hindi {
+        font-size: 0.9rem !important;
+        padding-top: 30px !important;  
+      }
+    }
+  .heading__container__hindi{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+  }
+  .hindi__h1{
+    max-width: 600px;
+    text-shadow: 2px 2px 2px black;
+  }
+  @media (max-width: 768px) {
+    .hindi__h2 {
+      margin-top: -5px !important; 
+      font-size: 17px; 
+    }
+  }
+  .hindi__h2{
+    margin-top: -20px;
+    text-align:center;
+    color: white;
+    font-weight: normal;
+    text-shadow: 0 0 8px #000;
+  }
+  .hindi__h3{
+    text-align:center;
+    color: white;
+    font-weight: normal;
+    text-shadow: 0 0 8px #000;
+  }
+  @media (max-width: 768px) {
+    .hindi__h3 { 
+      font-size: 20px; 
+      max-width: 350px; 
+      margin-top: -5px;
+    }
+  }
+  @media (max-width: 768px) {
+    .h3__div {
+     display: flex;
+     justify-content: center;
+    }
+  }
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.btn__container{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 12px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+ 
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .eng__iframe {
+   display: block !important;
+   margin-top: 20px !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 768px) {
+  .eng__content__h1{
+    width: 600px;
+    font-size: x-large;
+    text-align: left;
+    font-weight: normal;
+    color: white;
+    padding-left: 20px;
+    margin-right: -90px;
+    text-shadow: 2px 2px 2px black;
+  }
+}
+.eng__iframe{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 200px;
+  /* background-color: rgba(0, 0, 0, 0.617); */
+}
+.ifrm__eng{
+  
+  border: 4px solid red;
+  /* border: 5px solid white; */
+  background-color: #000;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .ifrm__eng{
+
+    width: 200px;
+  
+    /* margin-left: 30px; */
+ 
+ }
+}
+.eng__content__container{
+  display: block;
+
+}
+.eng__content__h1{
+  width: 600px;
+  text-align: left;
+  font-weight: normal;
   color: white;
+  padding-left: 20px;
+  margin-right: -90px;
+  text-shadow: 2px 2px 2px black;
 }
-
-.App-link {
-  color: #61dafb;
+.hr__content{
+  width: 200px;
+  padding: 2px;
+  background-color: red;
+  text-shadow: 2px 2px 2px black;
+  border: none;
+  margin-left: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .eng__content__h2{
+    width: 350px !important;
+   font-size: larger;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.eng__content__h2{
+  width: 550px;
+  text-shadow: 2px 2px 2px black;
+  text-align: left;
+  font-weight: normal;
+  color: white;
+  padding-left: 20px;
+  margin-right: -90px;
 }
